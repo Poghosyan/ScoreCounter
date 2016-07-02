@@ -8,20 +8,53 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.scapegates.scorecounter.MainActivity">
+    tools:context="com.scapegates.scorecounter.MainActivity"
+    android:id="@+id/container">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="4dp"
-        android:text="@string/home"/>
-    <TextView
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/homeButton"
+            android:text="@string/homePicker"
+            style="?android:attr/buttonBarButtonStyle"
+            android:onClick="pickHome"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/awayButton"
+            android:text="@string/awayPicker"
+            style="?android:attr/buttonBarButtonStyle"
+            android:onClick="pickAway"
+            />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:padding="4dp"
-        android:id="@+id/homeTeamPoints"/>
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/startingScore"
+            android:id="@+id/homeTeamPoints"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="4dp"
+            android:text="@string/startingScore"
+            android:id="@+id/awayTeamPoints"/>
+    </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
