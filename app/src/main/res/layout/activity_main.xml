@@ -11,21 +11,33 @@
     tools:context="com.scapegates.scorecounter.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:text="@string/home"/>
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="4dp"
+        android:id="@+id/homeTeamPoints"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/threePointer"/>
+        android:layout_margin="8dp"
+        android:text="@string/threePointer"
+        android:onClick="homeThreePointer"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/twoPointer"/>
+        android:layout_margin="8dp"
+        android:text="@string/twoPointer"
+        android:onClick="homeTwoPointer"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/freeThrow"/>
+        android:layout_margin="8dp"
+        android:text="@string/freeThrow"
+        android:onClick="homeFreeThrow"/>
 </LinearLayout>
