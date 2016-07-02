@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        currentView = (TextView) findViewById(R.id.homeTeamPoints);
     }
 
     public void homeThreePointer(View view) {
@@ -65,5 +66,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void pickAway(View view) {
         currentView = (TextView) findViewById(R.id.awayTeamPoints);
+    }
+
+    public void resetScores(View view) {
+        homePoints = 0;
+        awayPoints = 0;
+        pickHome(null);
+        display(homePoints);
+        pickAway(null);
+        display(awayPoints);
     }
 }

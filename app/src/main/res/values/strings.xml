@@ -6,4 +6,5 @@
     <string name="awayPicker">Away</string>
     <string name="homePicker">Home</string>
     <string name="startingScore">0</string>
+    <string name="reset">Reset</string>
 </resources>
